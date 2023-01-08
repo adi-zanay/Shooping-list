@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Budget Planner</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+</head>
+<body>
+  <ion-app>
+    <ion-card>
+  <ion-card-content>
+    <ion-item>
+    <ion-label position="floating">Expanse Reason</ion-label>
+    <ion-input type="text" id="input-reason"></ion-input>
+    </ion-item>
+<ion-item>
+    <ion-label position="floating">Expanse Amount</ion-label>
+    <ion-input type="number" id="input-amount"></ion-input>
+</ion-item>
+
+<div margin-vertical class="ion-text-right">
+    <ion-button fill="outline" color="danger" id="btn-cancel">
+    <ion-icon slot="start" name="close-circle-outline"></ion-icon>
+    Clear</ion-button>
+    
+    <ion-button id="btn-confirm">
+    <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+    Add Expanses</ion-button>
+</div>
+  </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      List of Items:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list id="expenses_list">
+              <!-- <ion-item>Furnitures : </ion-item>
+              <ion-item>Books : </ion-item>
+              <ion-item>Computers : </ion-item>
+              <ion-item>Mobiles : </ion-item> -->
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p>Total Expanses : <span id="total_expenses"></span></p>
+          </ion-col>
+        </ion-row>
+           
+  
+
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-alert-controller>
+  </ion-alert-controller>
+  </ion-app>
+  <script src='app.js'></script>
+</body>
+</html>
